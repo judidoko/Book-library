@@ -45,7 +45,7 @@ ul {
 }
 
 li a {
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   color: var(--header-color);
   font-weight: 800;
 }
@@ -76,7 +76,7 @@ header {
 
 .new-book-btn {
   display: block;
-  padding: 1em;
+  padding: 0.8em;
   font-size: 1.3rem;
   background-color: var(--btn-color);
   color: var(--header-color);
