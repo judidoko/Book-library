@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --header-color: #ffffff;
+  --header-hover-color: #9e9e9e;
+  --btn-color: #995706;
+  --btn-hover-color: #653700;
+  --header-bg-color: #1c1c1c;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  position: relative;
+}
+
+nav {
+  padding-top: 1.2em;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+li a {
+  font-size: 2.2rem;
+  color: var(--header-color);
+  font-weight: 800;
+}
+
+li a:hover {
+  color: var(--header-hover-color);
+}
+
+header {
+  background-image: url("./images/banner.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  text-align: center;
+  color: var(--header-color);
+}
+
+.centered {
+  position: relative;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.centered h3 {
+  font-size: 3rem;
+}
+
+.new-book-btn {
+  display: block;
+  padding: 1em;
+  font-size: 1.3rem;
+  background-color: var(--btn-color);
+  color: var(--header-color);
+  border: none;
+  border-radius: 0.8em;
+  cursor: pointer;
+}
+
+.myModal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+form {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  text-align: center;
+  padding: 1.4em;
+  border: 1px solid #ddd;
+  color: var(--header-color);
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.close {
+  color: #c70000;
+  float: right;
+  margin-top: -19px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #590303;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  width: 90%;
+  padding: 0.8em;
+  font-size: 1rem;
+  margin-top: 0.2;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  outline: none;
+  transition: 0.3s;
+  margin-bottom: 10px;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+  border-color: #333;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+label {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  display: block;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 1.6rem;
+  margin-top: 1.7em;
+  background-color: var(--header-bg-color);
+  color: var(--header-color);
+  padding: 1.4em;
+  text-align: center;
+}
+
+.book-card {
+  display: inline-block;
+  width: 350px;
+  height: 300px;
+  padding: 1rem;
+  margin-bottom: 1em;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.book-header {
+  background-color: var(--header-bg-color);
+  color: var(--header-color);
+  padding: 1em 0;
+  text-align: center;
+}
+
+.book-title {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.book-auther {
+  margin: 0.5em 0;
+  font-size: 1.4rem;
+}
+
+.book-body p {
+  margin: 0.5em 0;
+}
+
+.book-pages {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.book-status {
+  margin: 0.7em;
+  font-size: 1rem;
+  color: var(--header-hover-color);
+}
+
+button {
+  padding: 0.7em 1.4em;
+  border: 2px solid var(--header-hover-color);
+  border-radius: 5px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: var(--header-color);
+  cursor: pointer;
+}
+
+.remove-book-btn {
+  margin-top: 0.5em;
+  font-size: 1.1rem;
+}
+
+.toggle-read-btn {
+  font-size: 1.4rem;
+}
+
+button:hover {
+  background-color: var(--btn-hover-color);
+  color: var(--header-color);
+}
+
+.read-status {
+  background-color: var(--btn-color);
+  padding: 0.5em 0;
+  color: var(--header-color);
+}
+
+.libraryBooks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 2rem;
+  padding: 0 2em;
+}
