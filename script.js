@@ -19,17 +19,30 @@ formSubmit.addEventListener("submit", function (e) {
 
 const myLibrary = [];
 
-function Book(title, author, pages, read) {
-  // the constructor...
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
+class Book {
+  constructor(title, author, pages, read) {
+    // the constructor...
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
+  }
+  toggleRead() {
+    this.read = !this.read;
+  }
 }
 
-Book.prototype.toggleRead = function () {
-  this.read = !this.read;
-};
+// function Book(title, author, pages, read) {
+//   // the constructor...
+//   this.title = title;
+//   this.author = author;
+//   this.pages = pages;
+//   this.read = read;
+// }
+
+// Book.prototype.toggleRead = function () {
+//   this.read = !this.read;
+// };
 
 function toggleRead(index) {
   myLibrary[index].toggleRead();
